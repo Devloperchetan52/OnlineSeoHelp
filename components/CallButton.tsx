@@ -2,7 +2,7 @@
 import React from 'react';
 
 const CallButton: React.FC = () => {
-  const phoneNumber = '+918587002292';
+  const phoneNumber = '+919717044331';
 
   return (
     <a

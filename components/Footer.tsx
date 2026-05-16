@@ -94,11 +94,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-slate-400 mr-3">📞</span>
-                +1 (555) 000-0000
+                <a href="tel:+919717044331" className="hover:text-[#7f1bff] transition-colors">+91 97170 44331</a>
               </li>
               <li className="flex items-start">
                 <span className="text-slate-400 mr-3">✉️</span>
-                hello@onlineseohelp.com
+                <a href="mailto:divash12@gmail.com" className="hover:text-[#7f1bff] transition-colors">divash12@gmail.com</a>
               </li>
             </ul>
           </div>

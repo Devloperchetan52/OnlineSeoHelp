@@ -70,22 +70,22 @@ const BookDemo: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4 mb-10">
-            <a href="tel:+919876543210" className="flex items-center gap-4 p-4 bg-white border border-slate-200 rounded-2xl hover:border-[#7f1bff]/40 transition-all group">
+            <a href="tel:+919717044331" className="flex items-center gap-4 p-4 bg-white border border-slate-200 rounded-2xl hover:border-[#7f1bff]/40 transition-all group">
               <div className="w-10 h-10 bg-purple-50 text-[#7f1bff] rounded-xl flex items-center justify-center">
                 <PhoneIcon className="w-5 h-5" />
               </div>
               <div>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Call / WhatsApp</p>
-                <p className="font-bold text-slate-900 group-hover:text-[#7f1bff] transition-colors">+91 98765 43210</p>
+                <p className="font-bold text-slate-900 group-hover:text-[#7f1bff] transition-colors">+91 97170 44331</p>
               </div>
             </a>
-            <a href="mailto:hello@onlineseohelp.com" className="flex items-center gap-4 p-4 bg-white border border-slate-200 rounded-2xl hover:border-[#7f1bff]/40 transition-all group">
+            <a href="mailto:divash12@gmail.com" className="flex items-center gap-4 p-4 bg-white border border-slate-200 rounded-2xl hover:border-[#7f1bff]/40 transition-all group">
               <div className="w-10 h-10 bg-purple-50 text-[#7f1bff] rounded-xl flex items-center justify-center">
                 <EnvelopeIcon className="w-5 h-5" />
               </div>
               <div>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Email</p>
-                <p className="font-bold text-slate-900 group-hover:text-[#7f1bff] transition-colors">hello@onlineseohelp.com</p>
+                <p className="font-bold text-slate-900 group-hover:text-[#7f1bff] transition-colors">divash12@gmail.com</p>
               </div>
             </a>
           </div>
@@ -132,7 +132,7 @@ const BookDemo: React.FC = () => {
                   {/* Phone */}
                   <div className="space-y-1.5">
                     <label className="text-sm font-bold text-slate-700">Phone / WhatsApp *</label>
-                    <input required type="tel" placeholder="+91 98765 43210" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#7f1bff] focus:bg-white transition-all" />
+                    <input required type="tel" placeholder="+91 97170 44331" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#7f1bff] focus:bg-white transition-all" />
                   </div>
 
                   {/* Website URL - optional */}

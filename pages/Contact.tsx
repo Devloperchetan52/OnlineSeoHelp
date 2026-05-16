@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">Email Us</h4>
-                      <a href="mailto:hello@onlineseohelp.com" className="text-[#7f1bff] text-sm font-medium hover:underline">hello@onlineseohelp.com</a>
+                      <a href="mailto:divash12@gmail.com" className="text-[#7f1bff] text-sm font-medium hover:underline">divash12@gmail.com</a>
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-purple-100 rounded-2xl">
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">Call / WhatsApp</h4>
-                      <a href="tel:+919876543210" className="text-slate-600 text-sm hover:text-[#7f1bff] transition-colors">+91 98765 43210</a>
+                      <a href="tel:+919717044331" className="text-slate-600 text-sm hover:text-[#7f1bff] transition-colors">+91 97170 44331</a>
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-slate-100 rounded-2xl">
