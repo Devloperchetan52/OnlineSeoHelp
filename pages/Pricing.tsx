@@ -29,7 +29,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {PRICING_PLANS.map((plan, idx) => (
             <div 
               key={idx} 
@@ -66,6 +66,73 @@ const Pricing: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Website Design Plans */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7f1bff]/10 text-[#7f1bff] text-xs font-black uppercase tracking-widest mb-4">Website Design & Development</span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3 tracking-tight">Need a Website Too?</h2>
+            <p className="text-slate-500 font-medium max-w-xl mx-auto">Get a fast, modern, SEO-ready website — built to rank and convert from day one.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Basic Website */}
+            <div className="bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 transition-all">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Basic Website</h3>
+              <p className="text-slate-500 text-sm mb-5 font-medium">Landing page or simple brochure site for new businesses.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-black text-slate-900">$299</span>
+                <span className="text-slate-400 font-medium ml-2">one-time</span>
+              </div>
+              <Link to="/book-demo" className="block w-full text-center py-4 rounded-2xl font-black bg-slate-50 text-slate-900 hover:bg-slate-100 border border-slate-200 mb-8 transition-all">Get Started</Link>
+              <div className="space-y-3">
+                {['Up to 5 pages', 'Mobile responsive design', 'Basic on-page SEO setup', 'Contact form', '1 month free maintenance', 'Delivered in 7–10 days'].map((f, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckIcon className="w-5 h-5 text-[#7f1bff] flex-shrink-0" />
+                    <span className="text-sm text-slate-600 font-medium">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Business Website */}
+            <div className="relative bg-white rounded-[2.5rem] p-10 border border-[#7f1bff] shadow-xl ring-4 ring-purple-50 shadow-purple-500/5 hover:shadow-2xl transition-all">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#7f1bff] text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Most Popular</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Business Website</h3>
+              <p className="text-slate-500 text-sm mb-5 font-medium">Full business site with SEO optimization and lead capture.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-black text-slate-900">$699</span>
+                <span className="text-slate-400 font-medium ml-2">one-time</span>
+              </div>
+              <Link to="/book-demo" className="block w-full text-center py-4 rounded-2xl font-black bg-[#7f1bff] text-white hover:bg-[#6a15d9] shadow-lg shadow-purple-500/20 mb-8 transition-all">Get Started</Link>
+              <div className="space-y-3">
+                {['Up to 15 pages', 'Custom design (your brand)', 'Full on-page SEO + schema', 'Blog setup ready', '1 month free maintenance + on-page SEO', 'Google Analytics + Search Console', 'Delivered in 14–21 days'].map((f, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckIcon className="w-5 h-5 text-[#7f1bff] flex-shrink-0" />
+                    <span className="text-sm text-slate-600 font-medium">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Custom Plan */}
+            <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 border border-slate-800 shadow-sm hover:shadow-2xl transition-all flex flex-col">
+              <h3 className="text-xl font-bold mb-2">Custom Plan</h3>
+              <p className="text-slate-400 text-sm mb-5 font-medium">E-commerce, large portals, or specific requirements? Let us build exactly what you need.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-black text-white">Custom</span>
+              </div>
+              <Link to="/book-demo" className="block w-full text-center py-4 rounded-2xl font-black bg-white text-slate-900 hover:bg-slate-100 mb-8 transition-all">Get a Quote</Link>
+              <div className="space-y-3">
+                {['E-commerce / store setup', 'Unlimited pages', 'Custom features & integrations', 'Advanced SEO & speed optimization', 'Ongoing maintenance plan', 'Dedicated project manager'].map((f, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckIcon className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                    <span className="text-sm text-slate-300 font-medium">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Pricing FAQs */}

@@ -41,9 +41,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#7f1bff] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
-              </div>
+              <img src="/favicon.svg" alt="OnlineSEOHelp Logo" className="w-9 h-9" />
               <span className="text-xl font-bold text-slate-900 tracking-tight">
                 Online<span className="text-[#7f1bff]">SEOHelp</span>
               </span>

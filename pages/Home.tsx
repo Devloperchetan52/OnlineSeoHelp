@@ -6,288 +6,511 @@ import {
   RocketLaunchIcon, 
   PresentationChartLineIcon,
   MagnifyingGlassIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  AdjustmentsHorizontalIcon,
   StarIcon,
   CheckCircleIcon,
   CalendarIcon,
-  UserIcon
+  UserIcon,
+  ChartBarIcon,
+  MapPinIcon,
+  DocumentTextIcon,
+  LinkIcon,
+  ShieldCheckIcon,
+  BuildingStorefrontIcon,
+  WrenchScrewdriverIcon,
+  UsersIcon,
+  PencilSquareIcon,
+  ClockIcon,
+  BoltIcon,
+  GiftIcon,
+  ExclamationTriangleIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/solid';
-import { SERVICES, BLOG_POSTS, ICON_MAP, PRICING_PLANS, CASE_STUDIES } from '../constants';
+import { BLOG_POSTS, PRICING_PLANS, CASE_STUDIES } from '../constants';
 
 const Home: React.FC = () => {
   const [isYearly, setIsYearly] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState(0);
-  const [activeAdditionalTab, setActiveAdditionalTab] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const stats = [
-    { value: '91%', label: 'CLIENT RETENTION RATE', sub: 'Industry Average: 50%' },
-    { value: '93%', label: 'CLIENT SATISFACTION SCORE', sub: 'Industry Average: 72%' },
-    { value: '420%', label: 'HIGHER NPS SCORE THAN', sub: 'Industry Average: 16' },
-    { value: '500+', label: 'DIGITAL EXPERTS', sub: 'Global Growth Team' },
-    { value: '27+', label: 'YEARS IN BUSINESS', sub: 'Established 1998' },
+  const seoServices = [
+    { icon: <MagnifyingGlassIcon className="w-6 h-6" />, title: 'On-Page SEO Optimization', desc: 'Optimize meta tags, content structure, internal links, and images so every page is built to rank.' },
+    { icon: <WrenchScrewdriverIcon className="w-6 h-6" />, title: 'Technical SEO Fixes', desc: 'Fix speed issues, crawl errors, Core Web Vitals, and mobile problems that hold your rankings back.' },
+    { icon: <MapPinIcon className="w-6 h-6" />, title: 'Local SEO (Google Maps Ranking)', desc: 'Rank in "near me" searches and Google Maps — ideal for salons, clinics, gyms, and local businesses.' },
+    { icon: <DocumentTextIcon className="w-6 h-6" />, title: 'Keyword Research & Strategy', desc: 'Find low-competition, high-intent keywords your customers are actively searching for.' },
+    { icon: <PencilSquareIcon className="w-6 h-6" />, title: 'Content Optimization', desc: 'Create and optimize blogs, landing pages, and service content that ranks and converts visitors.' },
+    { icon: <LinkIcon className="w-6 h-6" />, title: 'Link Building & Authority Growth', desc: 'Earn quality backlinks via guest posts, outreach, and directories to boost your domain authority.' },
+  ];
+
+  const whoWeHelp = [
+    { icon: <BuildingStorefrontIcon className="w-7 h-7" />, label: 'Small Businesses', desc: 'Get found by local & national customers without a huge marketing budget.' },
+    { icon: <BoltIcon className="w-7 h-7" />, label: 'Startups', desc: 'Build organic traffic from day one and grow without burning cash on ads.' },
+    { icon: <WrenchScrewdriverIcon className="w-7 h-7" />, label: 'Local Service Providers', desc: 'Salons, Gyms, Clinics, Restaurants — rank at the top when people search nearby.' },
+    { icon: <PencilSquareIcon className="w-7 h-7" />, label: 'Bloggers & Affiliates', desc: 'Drive consistent search traffic and grow passive income through SEO.' },
+  ];
+
+  const expectations = [
+    { stat: '↑ Traffic', label: 'Increase in organic website visitors' },
+    { stat: '↑ Rankings', label: 'Higher positions on Google Search' },
+    { stat: '↑ Leads', label: 'More inquiries, calls & sign-ups' },
+    { stat: '↑ Performance', label: 'Faster, healthier, search-ready website' },
+  ];
+
+  const whyUs = [
+    { icon: <ChartBarIcon className="w-5 h-5" />, text: 'Affordable SEO plans built for startups & small businesses' },
+    { icon: <UsersIcon className="w-5 h-5" />, text: 'Personalized strategies — no copy-paste or generic work' },
+    { icon: <PresentationChartLineIcon className="w-5 h-5" />, text: 'Transparent monthly reporting you can actually understand' },
+    { icon: <RocketLaunchIcon className="w-5 h-5" />, text: 'Focused on real business results, not vanity metrics' },
+    { icon: <ClockIcon className="w-5 h-5" />, text: 'No long-term contracts — stay because it works' },
   ];
 
   const clientTestimonials = [
     {
-      name: 'C.H. Reed',
-      content: 'C.H. Reed was looking to increase its traffic and leads, and with a custom SEO and local SEO campaign from OnlineSEOHelp, the company has started to see impressive results — including a 40% increase in organic traffic.',
-      services: 'SEO, LOCAL SEO',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600',
-      logo: 'C.H. REED'
+      name: 'Rahul Verma',
+      role: 'Founder, Local Gym',
+      content: 'Within 3 months our Google ranking jumped from page 5 to page 1. We now get 15–20 new customer calls every week purely from search.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80',
     },
     {
-      name: 'All Pro Trailer Superstore',
-      content: '"OnlineSEOHelp has helped us expand our digital footprint not only in Central PA and the mid-Atlantic, but also throughout the Continental U.S."',
-      services: 'SEO, PPC, EMAIL, SOCIAL MEDIA, WEBSITE MAINTENANCE',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600',
-      logo: 'TRAILER SUPERSTORE'
+      name: 'Priya Nair',
+      role: 'CEO, D2C Skincare Brand',
+      content: 'OnlineSEOHelp doubled our organic traffic in 4 months. Our ad spend dropped by 40% and leads kept coming. Totally worth it.',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80',
     },
     {
-      name: 'de Ramon Plastic Surgery Institute',
-      content: '"The nice thing about working with OnlineSEOHelp has always been that they\'ve pushed us to up the quality of everything that we\'re doing."',
-      services: 'SEO, PPC, WEB DESIGN',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600',
-      logo: 'DERAMÓN'
-    }
-  ];
-
-  const tabs = [
-    { 
-      id: 0, 
-      label: 'Search Engine Optimization', 
-      icon: <MagnifyingGlassIcon className="w-5 h-5" />,
-      content: (
-        <div className="space-y-6 text-sm">
-          <p className="text-slate-600 leading-relaxed">SEO is the marketing process that gets your website to the top of search results for products and services you provide.</p>
-          <p className="text-slate-600 leading-relaxed font-medium">When someone searches online for something you sell, whether it's a product or service, you would hope that your business was front and center! <span className="font-bold text-slate-900">SEO is the process that gets you center stage for these searches.</span> It helps you rank better in search results and boost your visibility, so you can reach your targeted traffic and generate revenue.</p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Link to="/services" className="px-6 py-3 bg-purple-50 text-[#7f1bff] font-black rounded-xl hover:bg-purple-100 transition-all text-sm">View SEO Management Services</Link>
-          </div>
-        </div>
-      )
-    },
-    { 
-      id: 1, 
-      label: 'AI SEO', 
-      icon: <CpuChipIcon className="w-5 h-5" />,
-      content: (
-        <div className="space-y-6 text-sm">
-          <p className="text-slate-600 leading-relaxed">AI SEO leverages machine learning and generative AI to predict search trends and automate content optimization for the next generation of search.</p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="px-6 py-3 bg-purple-50 text-[#7f1bff] font-black rounded-xl hover:bg-purple-100 transition-all text-sm">See AI Capabilities</button>
-          </div>
-        </div>
-      )
-    },
-    { 
-      id: 2, 
-      label: 'OmniSEO®', 
-      icon: <AdjustmentsHorizontalIcon className="w-5 h-5" />,
-      content: (
-        <div className="space-y-6 text-sm">
-          <p className="text-slate-600 leading-relaxed">OmniSEO is our proprietary full-funnel optimization platform designed to unify search data across all digital touchpoints.</p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="px-6 py-3 bg-purple-50 text-[#7f1bff] font-black rounded-xl hover:bg-purple-100 transition-all text-sm">Demo OmniSEO Platform</button>
-          </div>
-        </div>
-      )
-    },
-  ];
-
-  const additionalServices = [
-    {
-      label: 'Digital Marketing',
-      title: '360° Digital Growth Ecosystem',
-      content: 'In the modern digital landscape, a fragmented approach leads to missed opportunities. Online SEO Help provides a unified 360-degree digital marketing strategy that synchronizes SEO, content, and paid channels into a single, high-performance growth engine. We don\'t just drive traffic; we build sustainable digital assets.',
-      subContent: 'Our methodology leverages advanced data attribution and consumer behavior analysis to ensure every touchpoint is optimized for conversion. By integrating multi-channel signals, we create a synergistic effect that accelerates brand authority and maximizes your return on digital investment.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      label: 'Pay Per Click',
-      title: 'Data-Driven Performance Advertising',
-      content: 'While organic search builds long-term equity, PPC provides the precision and velocity needed to capture immediate market intent. We don\'t just "buy clicks"; we buy revenue. Our PPC management service focuses on high-intent search terms, remarketing to warm leads, and aggressive display strategies that keep your brand top-of-mind.',
-      subContent: 'Our PPC experts manage performance-driven paid campaigns that deliver immediate ROI. We meticulously optimize bidding, ad copy, and landing pages to ensure your ad spend results in actual profit, maintaining constant vigilance over your campaign efficiency.',
-      image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      label: 'Social Media Marketing',
-      title: 'Social Authority & Audience Engagement',
-      content: 'Social signals are a critical component of brand trust and modern search relevance. We develop sophisticated social media strategies that transform your social presence into an authority hub. Our team manages your brand narrative across LinkedIn, Instagram, and X to foster community and trust.',
-      subContent: 'From LinkedIn professional networking to high-impact Instagram visual storytelling, we manage your brand\'s narrative. We focus on building genuine engagement that translates into multi-channel brand loyalty and increased viral reach potential.',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      label: 'Link Building',
-      title: 'Strategic Authority Acquisition',
-      content: 'Links remain one of the most powerful signals in Google\'s ranking algorithm, but quality is everything. We build high-quality backlink profiles through ethical outreach, guest posting, and digital PR to signal authority to search engines. Our approach ensures your domain grows in trust and prominence.',
-      subContent: 'We prioritize links that drive referral traffic and signal genuine authority. By conducting deep competitor backlink analysis and targeted outreach, we secure placements that provide both immediate SEO value and long-term brand credibility.',
-      image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      label: 'Guest Posting',
-      title: 'Editorial Placement & Thought Leadership',
-      content: 'Positioning your brand\'s experts on top-tier industry publications is the ultimate form of digital PR. We identify premium editorial opportunities that align with your brand\'s core expertise and secure placements that build your profile as a thought leader.',
-      subContent: 'Our editorial team creates high-value content that attracts, engages, and converts. We manage the entire lifecycle from topic identification to outreach and publication, ensuring every piece of content strengthens your brand equity.',
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      label: 'Reputation Management',
-      title: 'Defensive SEO & Brand Sentiment Control',
-      content: 'Your search results are your brand\'s first impression. Our Reputation Management (ORM) service uses "Defensive SEO" techniques to ensure the top results for your brand are positive and accurate. We monitor brand sentiment across review platforms, news sites, and social forums.',
-      subContent: 'We take extreme ownership of your digital image. By proactively managing reviews and countering negative signals with high-authority positive assets, we safeguard your brand\'s reputation and ensure a consistent first impression.',
-      image: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=800'
+      name: 'James Carter',
+      role: 'Owner, Law Firm',
+      content: 'We were invisible on Google before. Now we rank #1 for "personal injury lawyer near me" in our city. The ROI has been incredible.',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80',
     }
   ];
 
   return (
     <div className="bg-[#050505] text-white">
-      {/* Redesigned Hero Section */}
-      <section className="relative pt-48 pb-64 overflow-hidden bg-[#050505] min-h-[90vh] flex flex-col items-center justify-center">
-        {/* Background Perspective Grid Lines */}
-        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
-             style={{ 
-               backgroundImage: `linear-gradient(#ffffff15 1px, transparent 1px), linear-gradient(90deg, #ffffff15 1px, transparent 1px)`,
-               backgroundSize: '100px 100px',
-               perspective: '1000px',
-               transform: 'rotateX(65deg) translateY(-20%) scale(2)',
-               transformOrigin: 'top'
-             }}>
-        </div>
-        
-        {/* Glow Effects */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#7f1bff] rounded-full blur-[200px] opacity-20 pointer-events-none"></div>
+
+      {/* ── HERO SECTION ── */}
+      <section className="relative pt-40 pb-32 overflow-hidden bg-[#050505] min-h-screen flex flex-col items-center justify-center">
+        {/* Background grid */}
+        <div className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
+            backgroundSize: '80px 80px',
+          }} />
+        {/* Purple glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#7f1bff] rounded-full blur-[220px] opacity-20 pointer-events-none" />
 
         <div className={`max-w-5xl mx-auto px-4 relative z-10 text-center transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {/* Availability Badge */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold text-slate-300 mb-10 backdrop-blur-md">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-[0_0_10px_#22c55e]"></span>
-            3 spots left for Q2
+
+          {/* Trust badge */}
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-slate-300 mb-10 backdrop-blur-md">
+            <span className="w-2 h-2 bg-green-400 rounded-full shadow-[0_0_8px_#4ade80]" />
+            500+ small businesses trust us with their growth
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
-            Strategies that convert <br />
-            <span className="text-slate-400">searchers into buyers</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tighter">
+            Rank Higher on Google &<br />
+            <span className="text-[#7f1bff]">Get More Customers</span> Organically
           </h1>
-          
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto font-medium leading-relaxed">
-            Get a high-performing SEO strategy designed to turn clicks into customers, all with a simple, stress-free subscription—no contracts, no hassle.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <Link to="/book-demo" className="px-10 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-base active:scale-95 transform">
-              Start your free audit
-            </Link>
-            
-            <div className="flex flex-col items-start text-left">
-              <div className="flex gap-0.5 mb-1">
-                {[1, 2, 3, 4, 5].map(i => <StarIcon key={i} className="w-4 h-4 text-orange-400" />)}
-              </div>
-              <p className="text-[13px] font-bold text-slate-500">500+ founders trust us</p>
-            </div>
-          </div>
-        </div>
 
-        {/* Floating Preview Cards Section at Bottom */}
-        <div className="absolute bottom-[-60px] left-0 w-full overflow-hidden h-96 flex items-end justify-center pointer-events-none">
-           <div className="flex gap-8 px-10 items-end transform translate-y-12 rotate-[-1.5deg] w-max">
-             {CASE_STUDIES.slice(0, 6).map((study, idx) => (
-               <div 
-                 key={idx} 
-                 className={`w-64 bg-[#111111] rounded-[2rem] border border-white/10 overflow-hidden shadow-2xl transition-transform duration-700 flex-shrink-0 group ${idx % 2 === 0 ? 'h-80' : 'h-[24rem]'}`}
-                 style={{ transitionDelay: `${idx * 100}ms` }}
-               >
-                 <div className="relative h-1/2">
-                    <img src={study.image} alt="" className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#111] to-transparent"></div>
-                 </div>
-                 <div className="p-6">
-                   <p className="text-[9px] font-black uppercase tracking-widest text-[#7f1bff] mb-2">{study.industry}</p>
-                   <h4 className="text-sm font-bold text-white leading-snug line-clamp-2">{study.title}</h4>
-                   <div className="mt-4 flex items-center justify-between opacity-50">
-                     <span className="text-[9px] text-slate-400 font-bold uppercase">Case Study</span>
-                     <div className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center">
-                       <ArrowRightIcon className="w-3 h-3 text-white" />
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             ))}
-           </div>
+          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto font-medium leading-relaxed">
+            We help small businesses, startups, and local brands grow online through <span className="text-white font-bold">SEO, website development, and app development</span> — everything you need to rank, convert, and scale.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <Link
+              to="/book-demo"
+              className="px-10 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-base active:scale-95"
+            >
+              🎁 Get Your Free SEO Audit — Worth ₹2999
+            </Link>
+            <Link
+              to="/contact"
+              className="px-10 py-5 bg-white/5 border border-white/10 text-white font-black rounded-xl hover:bg-white/10 transition-all text-base active:scale-95 backdrop-blur-md"
+            >
+              📞 Book Free Consultation
+            </Link>
+          </div>
+
+          {/* Social proof stars */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex gap-1">
+              {[1,2,3,4,5].map(i => <StarIcon key={i} className="w-5 h-5 text-orange-400" />)}
+            </div>
+            <p className="text-sm text-slate-500 font-medium">Rated 4.9/5 by 200+ clients across 15 industries</p>
+          </div>
         </div>
       </section>
 
       <div className="bg-white text-slate-900 relative z-20">
-        {/* Interactive Tabs Section */}
-        <section className="py-32">
+
+        {/* ── 3 SERVICE PILLARS ── */}
+        <section className="py-24 bg-white border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-              The right SEO agency that <span className="text-[#7f1bff]">future-proofs</span> your search growth
-            </h2>
-            <div className="flex flex-col lg:flex-row gap-8 mt-16">
-              <div className="w-full lg:w-1/3 flex flex-col gap-2">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center gap-4 px-8 py-6 rounded-2xl text-left transition-all border ${activeTab === tab.id ? 'bg-white border-slate-100 shadow-xl text-[#7f1bff]' : 'border-transparent text-slate-500 hover:bg-slate-50'}`}
-                  >
-                    <div className={`p-2 rounded-lg ${activeTab === tab.id ? 'bg-purple-50 text-[#7f1bff]' : 'text-slate-400'}`}>
-                      {tab.icon}
-                    </div>
-                    <span className="font-bold text-sm">{tab.label}</span>
-                  </button>
-                ))}
-              </div>
-              <div className="w-full lg:w-2/3 bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-2xl">
-                {tabs[activeTab].content}
+            <div className="text-center mb-14">
+              <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">Our Services</p>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Everything You Need to Grow Online</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">We build, optimize, and scale your digital presence — all under one roof.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Service 1 — Website Development */}
+              <Link to="/services#website-design" className="group relative p-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
+                <div className="text-5xl mb-5">🌐</div>
+                <h3 className="text-2xl font-black text-white mb-3">Website Development</h3>
+                <p className="text-white/80 font-medium text-sm leading-relaxed mb-6 flex-1">
+                  Modern, fast, SEO-ready websites that look stunning on all devices. Built to convert visitors into customers.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {['Responsive design', 'Fast loading (90+ PageSpeed)', 'SEO-optimized structure', '1 month free maintenance'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-white/90 font-medium">
+                      <CheckCircleIcon className="w-3.5 h-3.5 text-white" />{item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="inline-flex items-center gap-2 text-white font-black text-sm group-hover:gap-4 transition-all">
+                  Explore Web Development <ArrowRightIcon className="w-4 h-4" />
+                </div>
+              </Link>
+              {/* Service 2 — SEO */}
+              <Link to="/services" className="group relative p-10 bg-gradient-to-br from-[#7f1bff] to-[#5a10c0] rounded-[2.5rem] hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
+                <div className="absolute top-4 right-4 px-3 py-1 bg-white/20 rounded-full text-[10px] font-black text-white uppercase tracking-wider">Most Popular</div>
+                <div className="text-5xl mb-5">🔍</div>
+                <h3 className="text-2xl font-black text-white mb-3">SEO Services</h3>
+                <p className="text-white/80 font-medium text-sm leading-relaxed mb-6 flex-1">
+                  Rank higher on Google, drive organic traffic, and generate leads — without paying for ads.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {['On-Page & Technical SEO', 'Local SEO (Google Maps)', 'Keyword research & content', 'Link building & authority'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-white/90 font-medium">
+                      <CheckCircleIcon className="w-3.5 h-3.5 text-white" />{item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="inline-flex items-center gap-2 text-white font-black text-sm group-hover:gap-4 transition-all">
+                  Explore SEO Services <ArrowRightIcon className="w-4 h-4" />
+                </div>
+              </Link>
+              {/* Service 3 — App Dev */}
+              <Link to="/services#app-development" className="group relative p-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
+                <div className="text-5xl mb-5">📱</div>
+                <h3 className="text-2xl font-black text-white mb-3">App Development</h3>
+                <p className="text-white/80 font-medium text-sm leading-relaxed mb-6 flex-1">
+                  Mobile & web apps that engage users, automate your business, and help you scale faster.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {['iOS & Android apps', 'Web apps & portals', 'E-commerce solutions', 'Maintenance & support'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-white/90 font-medium">
+                      <CheckCircleIcon className="w-3.5 h-3.5 text-white" />{item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="inline-flex items-center gap-2 text-white font-black text-sm group-hover:gap-4 transition-all">
+                  Explore App Development <ArrowRightIcon className="w-4 h-4" />
+                </div>
+              </Link>
+            </div>
+            <div className="text-center mt-12">
+              <Link to="/services" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-black rounded-xl hover:bg-[#7f1bff] transition-all shadow-lg text-sm">
+                View All Services <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ── OUR SEO SERVICES ── */}
+        <section className="py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">What We Do</p>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 tracking-tight">SEO Services That Drive Real Results</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
+                We offer complete SEO solutions tailored to your business goals.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {seoServices.map((service, idx) => (
+                <div key={idx} className="group p-8 bg-slate-50 rounded-[2rem] border border-slate-100 hover:border-[#7f1bff]/30 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300">
+                  <div className="w-12 h-12 bg-purple-50 text-[#7f1bff] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#7f1bff] group-hover:text-white transition-all">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-lg font-black text-slate-900 mb-2">{service.title}</h3>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">{service.desc}</p>
+                </div>
+              ))}
+              {/* CTA card */}
+              <div className="p-8 bg-[#7f1bff] rounded-[2rem] flex flex-col justify-between">
+                <p className="text-white/80 text-sm font-medium mb-6">Not sure which service you need? Let's find out together — for free.</p>
+                <Link to="/book-demo" className="inline-flex items-center gap-2 text-white font-black text-sm hover:gap-4 transition-all">
+                  Get a free audit <ArrowRightIcon className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section className="py-32 bg-slate-50/50">
+        {/* ── WEBSITE DESIGN & DEVELOPMENT ── */}
+        <section className="py-28 bg-[#050505] text-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex-1">
+                <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">We Also Build</p>
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-5 tracking-tight">
+                  🌐 Build a Website That<br />
+                  <span className="text-[#7f1bff]">Ranks &amp; Converts</span>
+                </h2>
+                <p className="text-slate-400 text-lg font-medium mb-5 leading-relaxed">
+                  We don't just design websites — we create SEO-friendly, high-performance websites that help your business grow online.
+                </p>
+                <p className="text-slate-400 text-sm italic mb-8 border-l-2 border-[#7f1bff] pl-4 leading-relaxed">
+                  "Unlike typical agencies, we combine website development with SEO to ensure your website not only looks good — but also ranks and brings customers."
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  {['Modern & responsive design', 'SEO-optimized structure from day 1', 'Fast loading speed (90+ PageSpeed)', 'Mobile-friendly design', 'Conversion-focused layout', 'Easy-to-manage website'].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-slate-300 font-medium">
+                      <CheckCircleIcon className="w-4 h-4 text-[#7f1bff] flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-slate-500 text-sm font-medium mb-8">👉 Perfect for businesses that want both design + SEO in one place.</p>
+                <Link to="/services#website-design" className="inline-flex items-center gap-2 px-10 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 active:scale-95">
+                  Get Your Website + SEO Plan <ArrowRightIcon className="w-5 h-5" />
+                </Link>
+              </div>
+              <div className="flex-1 w-full">
+                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=800"
+                    alt="Website Design & Development"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#7f1bff]/30 to-transparent" />
+                  <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl">
+                    <p className="text-xs font-black text-[#7f1bff] uppercase tracking-widest mb-1">Included Free</p>
+                    <p className="text-lg font-black text-slate-900">1 Month SEO + Maintenance</p>
+                    <p className="text-sm text-slate-500 font-medium">with every website we build</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── APP DEVELOPMENT SECTION ── */}
+        <section className="py-28 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex-1 w-full order-2 lg:order-1">
+                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+                    alt="App Development"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600/30 to-transparent" />
+                  <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl">
+                    <p className="text-xs font-black text-emerald-600 uppercase tracking-widest mb-1">Cross-Platform</p>
+                    <p className="text-lg font-black text-slate-900">iOS + Android + Web</p>
+                    <p className="text-sm text-slate-500 font-medium">Built with modern technologies</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 order-1 lg:order-2">
+                <p className="text-emerald-600 font-black uppercase tracking-widest text-xs mb-3">App Development</p>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 tracking-tight">
+                  📱 Launch an App That<br />
+                  <span className="text-emerald-600">Scales Your Business</span>
+                </h2>
+                <p className="text-slate-500 text-lg font-medium mb-5 leading-relaxed">
+                  From mobile apps to web portals, we build digital products that engage users, automate workflows, and drive revenue.
+                </p>
+                <p className="text-slate-500 text-sm italic mb-8 border-l-2 border-emerald-600 pl-4 leading-relaxed">
+                  "We build apps that don't just look great — they perform, grow with your business, and integrate with your digital strategy."
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                  {['iOS & Android apps', 'Web apps & dashboards', 'E-commerce solutions', 'Custom business tools', 'API integrations', 'Ongoing maintenance'].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-slate-600 font-medium">
+                      <CheckCircleIcon className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <Link to="/services#app-development" className="inline-flex items-center gap-2 px-10 py-5 bg-emerald-600 text-white font-black rounded-xl hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-500/30 active:scale-95">
+                  Get Your App Built <ArrowRightIcon className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHO WE HELP ── */}
+        <section className="py-28 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">Who We Work With</p>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-5 tracking-tight">Businesses We Help Grow</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
+                From startups to established brands — we focus on businesses that want real, sustainable growth.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {whoWeHelp.map((item, idx) => (
+                <div key={idx} className="p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#7f1bff]/20 transition-all duration-300 text-center">
+                  <div className="w-14 h-14 bg-purple-50 text-[#7f1bff] rounded-2xl flex items-center justify-center mx-auto mb-5">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-black text-slate-900 mb-2">{item.label}</h3>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHAT YOU CAN EXPECT ── */}
+        <section className="py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex-1">
+                <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">Results</p>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">What You Can Expect</h2>
+                <p className="text-slate-500 text-lg font-medium mb-10 leading-relaxed">
+                  We focus on <span className="text-slate-900 font-bold">long-term growth, not shortcuts.</span> Our clients see sustainable results that compound over time — not spikes that disappear.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  {expectations.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                      <CheckCircleIcon className="w-6 h-6 text-[#7f1bff] flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-black text-slate-900 text-lg">{item.stat}</p>
+                        <p className="text-slate-500 text-sm font-medium">{item.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex-1 w-full">
+                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=900"
+                    alt="SEO Results Dashboard"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#7f1bff]/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl">
+                    <p className="text-xs font-black text-[#7f1bff] uppercase tracking-widest mb-1">Real Client Result</p>
+                    <p className="text-2xl font-black text-slate-900">+300% Organic Traffic</p>
+                    <p className="text-sm text-slate-500 font-medium">in 6 months — B2B SaaS client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHY CHOOSE US ── */}
+        <section className="py-28 bg-[#050505] text-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">Why Choose Us</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-5 tracking-tight">Why Choose Online SEO Help?</h2>
+              <p className="text-slate-400 text-lg max-w-2xl mx-auto font-medium">
+                There are hundreds of SEO agencies. Here's why businesses like yours choose us — and stay with us.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {whyUs.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-4 p-7 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/10 hover:border-[#7f1bff]/40 transition-all duration-300">
+                  <div className="w-10 h-10 bg-[#7f1bff]/20 text-[#7f1bff] rounded-xl flex items-center justify-center flex-shrink-0">
+                    {item.icon}
+                  </div>
+                  <p className="text-white font-semibold text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── FREE SEO AUDIT LEAD MAGNET ── */}
+        <section className="py-28 bg-gradient-to-br from-[#7f1bff] to-[#4f0fbf] text-white">
+          <div className="max-w-5xl mx-auto px-4 text-center">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-bold text-white/80 mb-8">
+              <GiftIcon className="w-4 h-4" />
+              Limited Availability
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-5 tracking-tight">Get a Free SEO Audit</h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto font-medium mb-10 leading-relaxed">
+              We'll personally review your website and show you:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12 max-w-3xl mx-auto">
+              {[
+                { icon: '🔍', text: 'Why your website is not ranking on Google' },
+                { icon: '🎯', text: 'Which high-value keywords you are missing out on' },
+                { icon: '⚡', text: 'Exact changes that can start bringing you traffic' },
+              ].map((item, idx) => (
+                <div key={idx} className="p-6 bg-white/10 border border-white/20 rounded-2xl text-center backdrop-blur-sm">
+                  <span className="text-3xl block mb-3">{item.icon}</span>
+                  <p className="text-sm font-bold text-white leading-snug">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              to="/book-demo"
+              className="inline-flex items-center gap-3 px-12 py-5 bg-white text-[#7f1bff] font-black rounded-xl hover:bg-slate-50 transition-all shadow-2xl text-lg active:scale-95"
+            >
+              👉 Claim Your Free Audit Now
+            </Link>
+            <div className="mt-5 flex items-center justify-center gap-2 text-white/60 text-sm font-medium">
+              <ExclamationTriangleIcon className="w-4 h-4 text-yellow-400" />
+              Limited to <span className="text-yellow-300 font-bold mx-1">5 businesses per week.</span> Spots fill up fast.
+            </div>
+          </div>
+        </section>
+
+        {/* ── CASE STUDIES ── */}
+        <section className="py-28 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-4">Case Studies</h2>
-                <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Proven results from data-driven SEO.</h3>
+                <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-4">Proven Results</p>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Real clients. Real growth.</h2>
               </div>
               <Link to="/case-studies" className="inline-flex items-center gap-2 text-slate-900 font-black hover:text-[#7f1bff] transition-colors">
                 View all stories <ArrowRightIcon className="w-5 h-5" />
               </Link>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {CASE_STUDIES.slice(0, 3).map((study, idx) => (
                 <Link key={idx} to={`/case-studies/${study.id}`} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
-                  <div className="h-64 relative overflow-hidden">
+                  <div className="h-56 relative overflow-hidden">
                     <img src={study.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black text-[#7f1bff] uppercase border border-purple-100">
+                    <div className="absolute top-5 left-5 px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black text-[#7f1bff] uppercase border border-purple-100">
                       {study.industry}
                     </div>
                   </div>
-                  <div className="p-10">
+                  <div className="p-8">
                     <h4 className="text-xl font-black text-slate-900 mb-4 group-hover:text-[#7f1bff] transition-colors line-clamp-2">{study.title}</h4>
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-3 mb-6">
                       {study.results.slice(0, 2).map((res, i) => (
                         <div key={i} className="flex items-center gap-3">
-                          <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                          <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0" />
                           <span className="text-sm font-bold text-slate-700">{res}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
-                      <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Case Details</span>
-                      <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#7f1bff] group-hover:text-white transition-all">
-                        <ArrowRightIcon className="w-5 h-5" />
+                    <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
+                      <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Read Case Study</span>
+                      <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#7f1bff] group-hover:text-white transition-all">
+                        <ArrowRightIcon className="w-4 h-4" />
                       </div>
                     </div>
                   </div>
@@ -297,123 +520,58 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Additional Services Section */}
-        <section className="py-32 bg-white">
+        {/* ── TESTIMONIALS ── */}
+        <section className="py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black text-[#1a0b3d] mb-6 tracking-tight">Additional Services We Provide</h2>
-              <p className="text-slate-500 text-lg max-w-4xl mx-auto font-medium leading-relaxed">
-                OnlineSEOHelp is a top-rated SEO company that also offers a wide array of inbound and outbound marketing services to help grow your online visibility. Some of them are:
-              </p>
+              <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-3">Testimonials</p>
+              <h2 className="text-4xl font-black text-slate-900 tracking-tight">What Our Clients Say</h2>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-20 overflow-x-auto pb-4 px-2">
-              {additionalServices.map((service, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveAdditionalTab(idx)}
-                  className={`px-8 py-4 rounded-2xl font-bold text-sm whitespace-nowrap transition-all border ${activeAdditionalTab === idx ? 'bg-[#7f1bff] text-white border-[#7f1bff] shadow-xl shadow-purple-500/20' : 'bg-white text-slate-500 border-slate-100 hover:border-slate-300'}`}
-                >
-                  {service.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
-              <div className="flex-1 w-full">
-                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-100">
-                  <img 
-                    src={additionalServices[activeAdditionalTab].image} 
-                    alt={additionalServices[activeAdditionalTab].title} 
-                    className="w-full h-[500px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent"></div>
-                </div>
-              </div>
-              <div className="flex-1 space-y-8">
-                <h3 className="text-3xl md:text-4xl font-black text-[#1a0b3d] leading-tight tracking-tight">
-                  {additionalServices[activeAdditionalTab].title}
-                </h3>
-                <div className="space-y-6 text-slate-600 leading-relaxed font-medium text-lg">
-                  <p>{additionalServices[activeAdditionalTab].content}</p>
-                  <p>{additionalServices[activeAdditionalTab].subContent}</p>
-                </div>
-                <Link 
-                  to="/services" 
-                  className="inline-flex items-center gap-2 text-[#7f1bff] font-black hover:gap-4 transition-all"
-                >
-                  Know More <ArrowRightIcon className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Methodology Section */}
-        <section className="py-32 bg-slate-50/50">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-20">
-              <h2 className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-4">Our Methodology</h2>
-              <h3 className="text-4xl font-black text-slate-900 tracking-tight">How we drive unmatched growth.</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              {[
-                { step: "01", title: "Deep Site Audit", desc: "We analyze over 200 technical checkpoints.", icon: <MagnifyingGlassIcon className="w-8 h-8 text-[#7f1bff]" /> },
-                { step: "02", title: "Growth Blueprint", desc: "Custom-tailored keyword mapping.", icon: <PresentationChartLineIcon className="w-8 h-8 text-[#7f1bff]" /> },
-                { step: "03", title: "Velocity Execution", desc: "High-frequency content creation.", icon: <RocketLaunchIcon className="w-8 h-8 text-[#7f1bff]" /> }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white p-12 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-8">{item.icon}</div>
-                  <h4 className="text-2xl font-black text-slate-900 mb-4">{item.title}</h4>
-                  <p className="text-slate-500 font-medium">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-32">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-4xl font-black mb-16"><span className="text-[#7f1bff]">Testimonials</span> from our clients</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {clientTestimonials.map((item, idx) => (
-                <div key={idx} className="bg-[#f8f6ff] rounded-[2.5rem] p-10 h-[500px] relative overflow-hidden group border border-slate-100">
-                  <h4 className="text-2xl font-black mb-6">{item.name}</h4>
-                  <p className="text-slate-600 text-sm mb-8 line-clamp-6">{item.content}</p>
-                  <img src={item.image} alt="" className="absolute bottom-0 right-0 w-2/3 h-1/2 object-cover rounded-tl-[3rem] border-t-8 border-l-8 border-white group-hover:scale-105 transition-transform duration-700" />
+                <div key={idx} className="p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-300">
+                  <div className="flex gap-0.5 mb-5">
+                    {[1,2,3,4,5].map(i => <StarIcon key={i} className="w-4 h-4 text-orange-400" />)}
+                  </div>
+                  <p className="text-slate-700 text-sm font-medium leading-relaxed mb-8 italic">"{item.content}"</p>
+                  <div className="flex items-center gap-4">
+                    <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover border-2 border-[#7f1bff]/20" />
+                    <div>
+                      <p className="font-black text-slate-900 text-sm">{item.name}</p>
+                      <p className="text-slate-400 text-xs font-medium">{item.role}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Blog Insights Section */}
-        <section className="py-32 bg-slate-900 text-white overflow-hidden">
+        {/* ── BLOG INSIGHTS ── */}
+        <section className="py-28 bg-slate-900 text-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-4">Insights</h2>
-                <h3 className="text-4xl md:text-5xl font-black tracking-tight">Stay ahead of the curve.</h3>
+                <p className="text-[#7f1bff] font-black uppercase tracking-widest text-xs mb-4">Insights</p>
+                <h2 className="text-4xl md:text-5xl font-black tracking-tight">Stay ahead of the curve.</h2>
               </div>
               <Link to="/blog" className="inline-flex items-center gap-2 text-white font-black hover:text-[#7f1bff] transition-colors">
                 Read our blog <ArrowRightIcon className="w-5 h-5" />
               </Link>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {BLOG_POSTS.slice(0, 3).map((post, idx) => (
                 <Link key={idx} to={`/blog/${post.id}`} className="group bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden hover:bg-white/[0.08] hover:border-white/20 transition-all duration-500">
-                  <div className="h-56 relative overflow-hidden">
+                  <div className="h-52 relative overflow-hidden">
                     <img src={post.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-8">
-                    <div className="flex items-center gap-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">
+                    <div className="flex items-center gap-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-5">
                       <span className="flex items-center gap-1.5"><CalendarIcon className="w-3 h-3" /> {post.date}</span>
                       <span className="flex items-center gap-1.5"><UserIcon className="w-3 h-3" /> {post.author}</span>
                     </div>
                     <h4 className="text-xl font-black mb-4 group-hover:text-[#7f1bff] transition-colors line-clamp-2">{post.title}</h4>
-                    <p className="text-slate-400 text-sm font-medium line-clamp-3 mb-8">{post.excerpt}</p>
+                    <p className="text-slate-400 text-sm font-medium line-clamp-3 mb-6">{post.excerpt}</p>
                     <div className="flex items-center text-[#7f1bff] font-black text-xs gap-2 group-hover:gap-4 transition-all">
                       Read Article <ArrowRightIcon className="w-4 h-4" />
                     </div>
@@ -424,36 +582,41 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Enhanced Pricing Section */}
-        <section className="py-32 border-t border-slate-100">
+        {/* ── PRICING ── */}
+        <section className="py-28 border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-[#7f1bff] font-black text-xs uppercase mb-4 tracking-widest">Investment Plans</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-10 tracking-tight">Choose your path to scale.</h3>
-            
-            {/* Toggle Switch */}
-            <div className="flex items-center justify-center gap-4 mb-16">
+            <p className="text-[#7f1bff] font-black text-xs uppercase mb-4 tracking-widest">Transparent Pricing</p>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Affordable SEO Plans</h2>
+            <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10 font-medium">No hidden fees. No long-term contracts. Just results.</p>
+
+            <div className="flex items-center justify-center gap-4 mb-14">
               <span className={`text-sm font-bold ${!isYearly ? 'text-slate-900' : 'text-slate-400'}`}>Monthly</span>
-              <button 
+              <button
                 onClick={() => setIsYearly(!isYearly)}
                 className="w-14 h-8 bg-slate-100 rounded-full relative p-1.5 transition-colors hover:bg-slate-200"
               >
-                <div className={`w-5 h-5 bg-[#7f1bff] rounded-full transition-all duration-300 shadow-lg shadow-purple-500/30 ${isYearly ? 'translate-x-6' : 'translate-x-0'}`}></div>
+                <div className={`w-5 h-5 bg-[#7f1bff] rounded-full transition-all duration-300 shadow-lg shadow-purple-500/30 ${isYearly ? 'translate-x-6' : 'translate-x-0'}`} />
               </button>
-              <span className={`text-sm font-bold ${isYearly ? 'text-slate-900' : 'text-slate-400'}`}>Yearly <span className="text-[#7f1bff] font-black text-[10px] ml-1 uppercase">Save 20%</span></span>
+              <span className={`text-sm font-bold ${isYearly ? 'text-slate-900' : 'text-slate-400'}`}>
+                Yearly <span className="text-[#7f1bff] font-black text-[10px] ml-1 uppercase">Save 20%</span>
+              </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {PRICING_PLANS.map((plan, idx) => (
                 <div key={idx} className={`bg-white rounded-[2.5rem] p-10 border transition-all duration-500 hover:shadow-2xl ${plan.isPopular ? 'border-[#7f1bff] shadow-xl shadow-purple-500/5 ring-4 ring-purple-50' : 'border-slate-100 shadow-sm'}`}>
-                  {plan.isPopular && <div className="text-[10px] font-black text-[#7f1bff] uppercase tracking-[0.2em] mb-4">Recommended</div>}
+                  {plan.isPopular && <div className="text-[10px] font-black text-[#7f1bff] uppercase tracking-[0.2em] mb-4">Most Popular</div>}
                   <h3 className="text-xl font-bold mb-4">{plan.name}</h3>
                   <div className="mb-8">
                     <span className="text-5xl font-black tracking-tighter">${isYearly ? plan.yearlyPrice : plan.price}</span>
                     <span className="text-slate-400 font-medium ml-2">/mo</span>
                   </div>
-                  <Link to="/book-demo" className={`block w-full py-4 rounded-xl font-black mb-10 transition-all ${plan.isPopular ? 'bg-[#7f1bff] text-white hover:bg-[#6a15d9] shadow-xl shadow-purple-500/20' : 'bg-slate-50 text-slate-900 hover:bg-slate-100'}`}>Get Started</Link>
-                  <ul className="text-left space-y-5">
-                    {plan.features.slice(0, 5).map((f, i) => (
+                  <p className="text-slate-500 text-sm mb-6">{plan.description}</p>
+                  <Link to="/book-demo" className={`block w-full py-4 rounded-xl font-black mb-8 transition-all ${plan.isPopular ? 'bg-[#7f1bff] text-white hover:bg-[#6a15d9] shadow-xl shadow-purple-500/20' : 'bg-slate-50 text-slate-900 hover:bg-slate-100'}`}>
+                    Get Started
+                  </Link>
+                  <ul className="text-left space-y-4">
+                    {plan.features.map((f, i) => (
                       <li key={i} className="text-sm font-medium text-slate-600 flex items-start gap-3">
                         <CheckCircleIcon className="w-5 h-5 text-[#7f1bff] flex-shrink-0" />
                         <span>{f}</span>
@@ -465,6 +628,37 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* ── FINAL CTA ── */}
+        <section className="py-28 bg-[#050505] text-white">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-slate-300 mb-8 backdrop-blur-md">
+              <span className="w-2 h-2 bg-green-400 rounded-full shadow-[0_0_8px_#4ade80]" />
+              Taking new clients this month
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter leading-tight">
+              Ready to Grow<br />Your Business?
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+              Let's help you rank higher, attract more traffic, and convert visitors into paying customers — with SEO that actually works.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/book-demo"
+                className="px-12 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-lg active:scale-95"
+              >
+                👉 Get Started Today
+              </Link>
+              <Link
+                to="/contact"
+                className="px-12 py-5 bg-white/5 border border-white/10 text-white font-black rounded-xl hover:bg-white/10 transition-all text-lg active:scale-95 backdrop-blur-md"
+              >
+                📞 Book Free Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   );

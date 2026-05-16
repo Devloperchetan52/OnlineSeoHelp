@@ -41,8 +41,7 @@ const ServiceDetail: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="flex-1">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#7f1bff]/20 text-[#7f1bff] font-bold text-[10px] uppercase tracking-widest mb-8 border border-[#7f1bff]/30">
-                {ICON_MAP[service.icon]}
-                <span className="ml-2">Elite Solutions</span>
+                <span>Premium Services</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter">
                 {service.title}

@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                   <textarea rows={5} placeholder="Tell us about your SEO goals..." className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#7f1bff] focus:bg-white transition-all resize-none"></textarea>
                 </div>
                 <button type="submit" className="w-full py-5 bg-[#7f1bff] text-white font-bold rounded-xl hover:bg-[#6a15d9] transition-all shadow-xl shadow-purple-500/20 text-lg">
-                  Send Message
+                  Send Message →
                 </button>
               </form>
             </div>
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">Email Us</h4>
-                      <p className="text-slate-600 text-sm">hello@onlineseohelp.com</p>
+                      <a href="mailto:hello@onlineseohelp.com" className="text-[#7f1bff] text-sm font-medium hover:underline">hello@onlineseohelp.com</a>
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-purple-100 rounded-2xl">
@@ -74,8 +74,8 @@ const Contact: React.FC = () => {
                       <PhoneIcon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Call Us</h4>
-                      <p className="text-slate-600 text-sm">+1 (555) 000-0000</p>
+                      <h4 className="font-bold text-slate-900">Call / WhatsApp</h4>
+                      <a href="tel:+919876543210" className="text-slate-600 text-sm hover:text-[#7f1bff] transition-colors">+91 98765 43210</a>
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-slate-100 rounded-2xl">
