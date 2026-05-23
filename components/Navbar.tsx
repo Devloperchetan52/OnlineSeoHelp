@@ -38,9 +38,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-full">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#7f1bff] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
-              </div>
+              <img src="/favicon.svg" alt="OnlineSEOHelp Logo" className="w-9 h-9" />
               <span className="text-xl font-bold tracking-tight text-slate-900">
                 Online<span className="text-[#7f1bff]">SEOHelp</span>
               </span>

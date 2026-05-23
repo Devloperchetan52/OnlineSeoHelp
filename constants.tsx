@@ -80,11 +80,14 @@ export const SERVICES: Service[] = [
     shortDesc: 'Drive sustainable organic traffic through holistic search strategies.',
     fullDesc: 'Our core SEO service is designed to dominate the SERPs. We don\'t just look at keywords; we look at the entire ecosystem of your website. From information architecture to user experience, we optimize every touchpoint that search engine crawlers and users interact with.',
     benefits: ['Increased Organic Visibility', 'Higher Quality Traffic', 'Long-term Growth', 'Better ROI than PPC'],
-    process: ['Initial Audit', 'Competitor Analysis', 'Strategy Development', 'Implementation', 'Monitoring & Reporting'],
+    process: ['Keyword Research', 'Initial Audit', 'Competitor Analysis', 'Strategy Development', 'Implementation', 'Monitoring & Reporting'],
     icon: 'search',
-    image: 'https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800',
     detailedContent: 'Search Engine Optimization (SEO) is the backbone of digital visibility. In an era where 93% of online experiences begin with a search engine, appearing on the first page of Google is no longer optional—it is a business imperative. Our approach to SEO combines technical precision with creative content strategy to ensure your brand is the definitive answer to your customers\' questions.',
     features: [
+      { title: 'AEO — Answer Engine Optimization', description: 'Optimize your content to appear as direct answers in Google, Bing, and AI assistants — capturing zero-click traffic.' },
+      { title: 'AIO — AI-Integrated Optimization', description: 'Leverage AI tools to create E-E-A-T-aligned content at scale while maintaining the human experience Google rewards.' },
+      { title: 'GEO — Generative Engine Optimization', description: 'Ensure your brand appears inside ChatGPT, Gemini, and Perplexity responses — the next frontier of organic visibility.' },
       { title: 'Semantic Search Integration', description: 'We optimize for intent, not just keywords, ensuring your content satisfies complex user queries.' },
       { title: 'E-E-A-T Optimization', description: 'Establishing your brand as an industry authority through expert-led content and verified signals.' },
       { title: 'Crawl Budget Management', description: 'Fine-tuning your site architecture so Google spends time on your most valuable pages.' }
@@ -150,7 +153,7 @@ export const SERVICES: Service[] = [
     benefits: ['Immediate Traffic', 'Precise Audience Targeting', 'Scalable Growth', 'Measurable ROI'],
     process: ['Keyword Bidding Strategy', 'Ad Creative Development', 'Landing Page Optimization', 'Performance Monitoring'],
     icon: 'chart',
-    image: 'https://images.unsplash.com/photo-1533750354897-42887951c1ee?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800',
     detailedContent: 'Paid search is a surgical instrument for growth. We don\'t just "buy clicks"; we buy revenue. Our PPC management service focuses on high-intent search terms, remarketing to warm leads, and aggressive display strategies that keep your brand top-of-mind. We treat your ad spend as if it were our own.',
     features: [
       { title: 'Granular Bidding Management', description: 'Manual and automated bidding strategies to maximize conversion value and lower CPA.' },
@@ -196,7 +199,7 @@ export const SERVICES: Service[] = [
     benefits: ['Clear Growth Roadmap', 'Uncover Hidden Errors', 'Competitive Benchmarking', 'Performance Insight'],
     process: ['Data Gathering', 'Metric Analysis', 'Expert Review', 'Strategy Presentation'],
     icon: 'desktop',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'keyword-research',
@@ -206,7 +209,23 @@ export const SERVICES: Service[] = [
     benefits: ['Precise Targeting', 'Competitive Advantage', 'Content Strategy Map', 'Higher Intent Leads'],
     process: ['Seed Keyword Analysis', 'Topic Clustering', 'Intent Categorization', 'Opportunity Gap Analysis'],
     icon: 'key',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'website-design',
+    title: 'Website Design & Development',
+    shortDesc: 'Fast, modern, SEO-ready websites built to rank and convert.',
+    fullDesc: 'Your website is your most important digital asset. We design and develop fast, mobile-first, SEO-optimized websites that make a great first impression and turn visitors into customers. Every site includes 1 month free maintenance and on-page SEO setup.',
+    benefits: ['Mobile-First Design', 'Built-in SEO Foundation', 'Fast Page Speed (90+ Score)', '1 Month Free Maintenance + On-Page SEO'],
+    process: ['Discovery & Planning', 'UI/UX Design', 'Development', 'SEO Setup & Launch', '1 Month Support'],
+    icon: 'desktop',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=800',
+    detailedContent: 'A poorly designed or slow website kills your SEO efforts before they even start. We build websites from the ground up with performance, search visibility, and conversion in mind. Every project includes proper semantic HTML, schema markup, optimized images, and a clean site architecture that Google loves.',
+    features: [
+      { title: 'SEO-Ready from Day 1', description: 'Every page is built with proper title tags, meta descriptions, schema markup, and clean URL structure.' },
+      { title: 'Page Speed Optimized', description: 'We target 90+ Core Web Vitals scores — critical for Google rankings and user experience.' },
+      { title: '1 Month Free Maintenance + On-Page SEO', description: 'After launch, we handle bug fixes and on-page SEO tweaks for 30 days at no extra cost.' }
+    ]
   }
 ];
 
@@ -224,7 +243,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       '#1 Ranking for 12 Primary Competitive Keywords'
     ],
     outcomeSummary: 'By restructuring their knowledge base and focusing on mid-funnel content, TechFlow became a topical authority in cloud scalability.',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'ecostyle-ecommerce',
@@ -507,6 +526,241 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-06-30',
     category: 'Technical SEO',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'rank-new-website-2026',
+    title: 'How to Rank a New Website in 2026',
+    excerpt: 'Starting from zero? Here is the exact step-by-step framework to get a brand-new website ranking on Google in 2026.',
+    content: `
+      <h2>Ranking a New Website from Scratch in 2026</h2>
+      <p>Getting a new website to rank on Google is harder than ever — but it's absolutely possible if you follow the right steps. In 2026, search engines are smarter, AI-generated content is everywhere, and only genuinely helpful, well-structured websites rise to the top.</p>
+      <h3>Step 1: Start with Keyword Research</h3>
+      <p>Before you write a single word, know exactly what your audience is searching for. Use tools like Google Search Console, Ubersuggest, or Ahrefs to find low-competition, high-intent keywords that are realistic to rank for as a new site.</p>
+      <h3>Step 2: Build on a Fast, SEO-Ready Foundation</h3>
+      <p>Your website needs to pass Core Web Vitals — LCP under 2.5s, CLS near zero, and INP under 200ms. Use a fast hosting provider, optimize images, and minimize JavaScript. Google rewards fast, clean sites.</p>
+      <h3>Step 3: Create Pillar Content</h3>
+      <p>Write 5–10 comprehensive, expert-led articles on your core topics. These pillar pages become the foundation of your topical authority. Each should be 1,500+ words and answer every question a user might have.</p>
+      <h3>Step 4: Get Your First Backlinks</h3>
+      <p>As a new site, you have zero authority. Focus on getting listed in local directories, guest posting on niche blogs, and earning a few mentions from industry sites. Even 5–10 quality backlinks make a difference early on.</p>
+      <h3>Step 5: Be Patient and Consistent</h3>
+      <p>New websites typically need 3–6 months to see significant organic traffic. Publish consistently, track your rankings monthly, and keep improving your content quality.</p>
+    `,
+    author: 'Macy Storm',
+    date: '2026-01-15',
+    category: 'SEO / BASICS',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'seo-checklist-beginners',
+    title: 'SEO Checklist for Beginners: 25 Steps to Get Started',
+    excerpt: 'New to SEO? Follow this simple 25-point checklist to make sure your website is set up for success on Google.',
+    content: `
+      <h2>The Complete SEO Checklist for Beginners (2026)</h2>
+      <p>SEO can feel overwhelming when you're just starting out. This checklist breaks it down into simple, actionable steps anyone can follow — even without a technical background.</p>
+      <h3>Technical Setup (Do This First)</h3>
+      <ul class="list-disc pl-6 space-y-2"><li>Install SSL certificate (https://)</li><li>Submit XML sitemap to Google Search Console</li><li>Set up Google Analytics 4</li><li>Check mobile-friendliness in Google's Mobile-Friendly Test</li><li>Measure page speed with PageSpeed Insights</li></ul>
+      <h3>On-Page SEO Essentials</h3>
+      <ul class="list-disc pl-6 space-y-2"><li>Write unique title tags for every page (50–60 characters)</li><li>Write compelling meta descriptions (150–160 characters)</li><li>Use H1, H2, H3 headers correctly</li><li>Add alt text to every image</li><li>Use your target keyword naturally in the first paragraph</li></ul>
+      <h3>Content Quality Checks</h3>
+      <ul class="list-disc pl-6 space-y-2"><li>Write content that fully answers the user's question</li><li>Aim for 1,000+ words on key pages</li><li>Link to related pages on your own site (internal links)</li><li>Link out to credible sources (external links)</li></ul>
+      <p>Follow this checklist and you'll be ahead of 80% of websites. SEO is a marathon, not a sprint — consistency wins.</p>
+    `,
+    author: 'Sarah Jenkins',
+    date: '2026-02-01',
+    category: 'SEO / BASICS',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'why-website-not-getting-traffic',
+    title: 'Why Your Website Is Not Getting Traffic (And How to Fix It)',
+    excerpt: 'Struggling with zero visitors? These are the most common reasons websites fail to get organic traffic — and exactly how to fix each one.',
+    content: `
+      <h2>Why Your Website Is Not Getting Traffic</h2>
+      <p>You built a website, published some content, and… nothing. No visitors. No leads. No sales. This is one of the most frustrating experiences for any business owner. The good news? There are specific, fixable reasons why this happens.</p>
+      <h3>Reason 1: Your Site Is Too New</h3>
+      <p>Google takes time to trust new websites. If your domain is less than 6 months old, it's normal to see very little organic traffic. Keep publishing consistently and building backlinks.</p>
+      <h3>Reason 2: You're Targeting the Wrong Keywords</h3>
+      <p>Many beginners target highly competitive keywords like "best shoes" or "digital marketing" when their site has no authority. Start with long-tail keywords — more specific phrases with lower competition.</p>
+      <h3>Reason 3: Your Content Is Too Thin</h3>
+      <p>A 200-word blog post won't rank in 2026. Google rewards comprehensive content that fully covers a topic. Aim for 1,000–2,000 words on key pages and make sure every question is answered.</p>
+      <h3>Reason 4: Technical SEO Issues</h3>
+      <p>If Google can't crawl or index your site, it can't rank it. Check for broken links, slow page speed, missing sitemaps, and crawl errors in Google Search Console.</p>
+      <h3>Reason 5: Zero Backlinks</h3>
+      <p>Backlinks are still one of Google's top ranking factors. If no external websites link to yours, you'll struggle to rank for competitive terms. Start by getting listed in relevant directories and reaching out for guest posts.</p>
+    `,
+    author: 'David Chen',
+    date: '2026-02-20',
+    category: 'SEO Basics',
+    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'local-seo-guide-small-businesses',
+    title: 'Local SEO Guide for Small Businesses (2026 Edition)',
+    excerpt: 'Everything a small business needs to know to dominate "near me" searches and attract local customers through Google.',
+    content: `
+      <h2>Local SEO: The Ultimate Guide for Small Businesses</h2>
+      <p>If you run a local business — a salon, restaurant, gym, clinic, or any service — local SEO is the single highest-ROI marketing activity you can do. It gets you in front of customers at the exact moment they're looking for what you offer.</p>
+      <h3>What Is Local SEO?</h3>
+      <p>Local SEO is the process of optimizing your online presence to attract customers from specific geographic areas. When someone searches "plumber near me" or "best cafe in Mumbai," local SEO determines who appears at the top.</p>
+      <h3>Step 1: Claim and Optimize Your Google Business Profile</h3>
+      <p>This is the most important step. Go to Google Business Profile, claim your listing, and fill out every single field — name, address, phone, hours, photos, services, and description. Businesses with complete profiles get 7x more clicks.</p>
+      <h3>Step 2: Get Customer Reviews</h3>
+      <p>Google reviews are a major local ranking factor. Ask every satisfied customer to leave a review. Even 20–30 positive reviews can vault you into the top 3 "map pack" results.</p>
+      <h3>Step 3: Build Local Citations</h3>
+      <p>Get your business listed on JustDial, IndiaMART, Sulekha, Yelp, and other local directories. Make sure your Name, Address, and Phone (NAP) are consistent everywhere.</p>
+      <h3>Step 4: Create Location-Specific Content</h3>
+      <p>Write blog posts and service pages that mention your city, neighborhood, and nearby landmarks. "Best gym in Koramangala, Bengaluru" is far easier to rank for than just "gym."</p>
+    `,
+    author: 'Macy Storm',
+    date: '2026-03-01',
+    category: 'Local SEO',
+    image: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'on-page-seo-step-by-step',
+    title: 'On-Page SEO Step by Step: A Complete 2026 Guide',
+    excerpt: 'Master on-page SEO with this step-by-step walkthrough covering everything from title tags to internal linking.',
+    content: `
+      <h2>On-Page SEO: Step by Step</h2>
+      <p>On-page SEO refers to all the optimizations you make directly on your web pages to improve their ranking potential. Unlike off-page SEO (backlinks), on-page is entirely within your control.</p>
+      <h3>1. Title Tag Optimization</h3>
+      <p>Your title tag is the most important on-page SEO element. Include your primary keyword near the beginning, keep it under 60 characters, and make it compelling enough to earn the click.</p>
+      <h3>2. Meta Description</h3>
+      <p>While meta descriptions aren't a direct ranking factor, they influence click-through rate. Write 150–160 character descriptions that include your keyword and a clear benefit or call to action.</p>
+      <h3>3. Header Tags (H1, H2, H3)</h3>
+      <p>Use one H1 per page (your main topic), and break content into sections with H2 and H3 subheadings. Include relevant keywords naturally in your headers.</p>
+      <h3>4. Content Optimization</h3>
+      <p>Write content that thoroughly covers the topic. Use your primary keyword in the first 100 words, include related terms (LSI keywords) naturally throughout, and aim for at least 1,000 words for competitive topics.</p>
+      <h3>5. Image Alt Text</h3>
+      <p>Every image should have a descriptive alt attribute that includes your keyword where relevant. This helps visually impaired users and gives Google context about your images.</p>
+      <h3>6. Internal Linking</h3>
+      <p>Link to other relevant pages on your site to help Google discover and rank them. Use descriptive anchor text — avoid generic "click here" links.</p>
+    `,
+    author: 'Sarah Jenkins',
+    date: '2026-03-10',
+    category: 'On-Page SEO',
+    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'free-seo-tools-list',
+    title: 'Free SEO Tools: 15 Best Tools You Can Use Right Now',
+    excerpt: 'You don\'t need to spend thousands on SEO tools. Here are 15 powerful free tools that cover everything from keyword research to technical audits.',
+    content: `
+      <h2>The 15 Best Free SEO Tools in 2026</h2>
+      <p>You don't need to spend $300/month on SEO tools to get results. These free tools cover every aspect of SEO and are used by professionals worldwide.</p>
+      <h3>Keyword Research</h3>
+      <ul class="list-disc pl-6 space-y-2"><li><strong>Google Keyword Planner</strong> — Free, accurate search volume data directly from Google.</li><li><strong>Ubersuggest (Free Tier)</strong> — Keyword ideas, competitor analysis, and content suggestions.</li><li><strong>AnswerThePublic</strong> — Find questions people are asking around any keyword.</li></ul>
+      <h3>Technical SEO</h3>
+      <ul class="list-disc pl-6 space-y-2"><li><strong>Google Search Console</strong> — The most important free SEO tool. Track rankings, indexing, and click data.</li><li><strong>Screaming Frog (Free — 500 URLs)</strong> — Crawl your site for technical issues.</li><li><strong>PageSpeed Insights</strong> — Check your Core Web Vitals score.</li></ul>
+      <h3>Backlink Analysis</h3>
+      <ul class="list-disc pl-6 space-y-2"><li><strong>Ahrefs Free Webmaster Tools</strong> — See backlinks and technical issues for your own site.</li><li><strong>Google Search Console (Links Report)</strong> — View who's linking to you for free.</li></ul>
+      <h3>Content & On-Page</h3>
+      <ul class="list-disc pl-6 space-y-2"><li><strong>Hemingway Editor</strong> — Check readability of your content.</li><li><strong>Yoast SEO (WordPress)</strong> — On-page optimization checklist for every post.</li></ul>
+    `,
+    author: 'David Chen',
+    date: '2026-03-20',
+    category: 'SEO Tools',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'keyword-research-free',
+    title: 'How to Do Keyword Research for Free (Step-by-Step 2026)',
+    excerpt: 'Find the exact keywords your customers are searching for — without paying for expensive tools. A practical, beginner-friendly guide.',
+    content: `
+      <h2>How to Do Keyword Research for Free</h2>
+      <p>Keyword research is the foundation of all SEO. Get it right, and every piece of content you create has a real chance of ranking. Get it wrong, and you'll spend months writing content nobody searches for.</p>
+      <h3>Step 1: Start with Google Autocomplete</h3>
+      <p>Type your main topic into Google and note the autocomplete suggestions. These are real searches people are making. They're goldmines for long-tail keyword ideas.</p>
+      <h3>Step 2: Check "People Also Ask" and "Related Searches"</h3>
+      <p>Scroll to the bottom of any Google search result page. The "Related Searches" section shows you other relevant queries. The "People Also Ask" box reveals common questions — perfect for FAQ sections.</p>
+      <h3>Step 3: Use Google Search Console</h3>
+      <p>If your site already has some content, Search Console shows you the exact queries people used to find you. Sort by impressions to find keywords you rank for but aren't fully optimizing.</p>
+      <h3>Step 4: Analyze Competitor Keywords</h3>
+      <p>Type a competitor's URL into Ubersuggest's free tier to see which keywords they rank for. Look for gaps — keywords they rank for that you don't yet target.</p>
+      <h3>Step 5: Prioritize by Intent, Not Just Volume</h3>
+      <p>A keyword with 100 monthly searches and high buying intent is worth more than a keyword with 10,000 searches from people just browsing. Focus on keywords where the searcher has a clear need you can fulfill.</p>
+    `,
+    author: 'Macy Storm',
+    date: '2026-04-01',
+    category: 'Keyword Research',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'technical-seo-basics',
+    title: 'Technical SEO Basics: What Every Website Owner Must Know',
+    excerpt: 'Technical SEO is what allows Google to find, crawl, and index your site. Here\'s what you need to fix to make your site search-engine-ready.',
+    content: `
+      <h2>Technical SEO Basics for Beginners</h2>
+      <p>Technical SEO is the foundation that everything else sits on. Without it, even great content and strong backlinks won't save your rankings. The good news is that most technical issues are fixable without being a developer.</p>
+      <h3>1. Make Sure Google Can Crawl Your Site</h3>
+      <p>Open Google Search Console and check the Coverage report. Any "Excluded" or "Error" pages need attention. Make sure your robots.txt file isn't accidentally blocking important pages.</p>
+      <h3>2. Submit Your XML Sitemap</h3>
+      <p>A sitemap tells Google which pages exist on your site and how often they're updated. Generate one automatically (most CMS platforms do this) and submit it in Google Search Console.</p>
+      <h3>3. Fix Slow Page Speed</h3>
+      <p>Page speed is a confirmed Google ranking factor and hugely impacts user experience. Use PageSpeed Insights to identify issues. Common fixes: compress images, remove unused plugins, enable browser caching.</p>
+      <h3>4. Ensure Your Site Is Mobile-Friendly</h3>
+      <p>Google uses mobile-first indexing — meaning it evaluates the mobile version of your site first. Test your site with Google's Mobile-Friendly Test tool and fix any issues flagged.</p>
+      <h3>5. Fix Broken Links and Redirect Chains</h3>
+      <p>Broken links (404 errors) and long redirect chains waste crawl budget and frustrate users. Use Screaming Frog (free up to 500 URLs) to find and fix them.</p>
+      <h3>6. Use HTTPS</h3>
+      <p>HTTPS is a ranking signal. If your site still runs on HTTP, get an SSL certificate immediately. Most hosting providers offer them for free via Let's Encrypt.</p>
+    `,
+    author: 'Sarah Jenkins',
+    date: '2026-04-10',
+    category: 'Technical SEO',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'common-seo-mistakes',
+    title: 'Common SEO Mistakes (And How to Avoid Them)',
+    excerpt: 'Even experienced marketers make these SEO errors. Learn the 10 most common mistakes that kill your rankings — and how to fix each one.',
+    content: `
+      <h2>10 Common SEO Mistakes That Are Killing Your Rankings</h2>
+      <p>SEO mistakes are expensive — not in money, but in opportunity. Every month you spend with a technical error or wrong strategy is a month your competitors are pulling ahead. Here are the most common mistakes we see.</p>
+      <h3>Mistake 1: Targeting Keywords That Are Too Competitive</h3>
+      <p>New and medium-sized sites should not be targeting "buy shoes online." Start with specific, lower-competition keywords where you can actually rank.</p>
+      <h3>Mistake 2: Duplicate Content</h3>
+      <p>Having the same content on multiple URLs confuses Google. Use canonical tags to tell Google which version of a page is the "official" one.</p>
+      <h3>Mistake 3: Ignoring Title Tags and Meta Descriptions</h3>
+      <p>Many sites leave these as defaults. Writing custom, keyword-rich title tags and compelling meta descriptions is one of the highest-impact, lowest-effort SEO improvements you can make.</p>
+      <h3>Mistake 4: Not Having a Mobile-Friendly Site</h3>
+      <p>Over 60% of searches happen on mobile. If your site isn't mobile-responsive, you're losing rankings and visitors every single day.</p>
+      <h3>Mistake 5: Not Tracking Results</h3>
+      <p>If you're not measuring rankings, traffic, and conversions, you have no idea if your SEO is working. Set up Google Analytics 4 and Google Search Console before you do anything else.</p>
+      <h3>Mistake 6: Publishing Thin Content</h3>
+      <p>A 200-word page rarely ranks. Google wants comprehensive, helpful content. Audit your thin pages and either expand them or consolidate them with related content.</p>
+      <h3>Mistake 7: Building Low-Quality Backlinks</h3>
+      <p>Spammy backlinks from unrelated or low-quality sites can trigger a Google penalty. Focus on earning links from reputable, relevant sources.</p>
+    `,
+    author: 'David Chen',
+    date: '2026-04-20',
+    category: 'SEO Basics',
+    image: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'how-google-ranking-works',
+    title: 'How Google Ranking Works: A Simple Explanation for Business Owners',
+    excerpt: 'How does Google decide which websites rank first? This plain-English explanation covers the key factors that determine your position in search results.',
+    content: `
+      <h2>How Does Google Ranking Actually Work?</h2>
+      <p>Google processes over 8.5 billion searches every day. For each search, its algorithm evaluates hundreds of factors to decide which pages deserve to be shown first. Here's a simplified breakdown of what matters most.</p>
+      <h3>1. Relevance</h3>
+      <p>Google first filters results to only show pages relevant to the search query. It analyzes your content to understand what your page is about. This is why keyword optimization matters — you need to clearly communicate what your page covers.</p>
+      <h3>2. Authority (Backlinks)</h3>
+      <p>Google measures how trustworthy and authoritative your site is based largely on backlinks — other websites linking to yours. Think of each backlink as a "vote of confidence." More high-quality votes = higher rankings.</p>
+      <h3>3. User Experience Signals</h3>
+      <p>Google tracks how users interact with search results. If people click on your result and immediately bounce back to Google, that's a negative signal. Fast load times, mobile-friendliness, and engaging content keep users on your page longer.</p>
+      <h3>4. Content Quality (E-E-A-T)</h3>
+      <p>Google evaluates Experience, Expertise, Authoritativeness, and Trustworthiness. This matters especially for health, finance, and legal topics. Demonstrate genuine expertise through well-researched, accurate, author-attributed content.</p>
+      <h3>5. Freshness</h3>
+      <p>For certain queries (news, trending topics), Google favors fresh content. For other queries (how to tie a tie), freshness matters less. Keep your most important pages updated with current information.</p>
+      <h3>How Long Does It Take to Rank?</h3>
+      <p>Most new pages take 3–6 months to rank in competitive niches. Low-competition keywords can rank in weeks. Consistency and patience are essential — SEO is a long-term investment with compounding returns.</p>
+    `,
+    author: 'Sarah Jenkins',
+    date: '2026-05-01',
+    category: 'SEO Basics',
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800'
   }
 ];
 

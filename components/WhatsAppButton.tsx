@@ -2,7 +2,7 @@
 import React from 'react';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '918587002292';
+  const phoneNumber = '919717044331';
   const message = encodeURIComponent('Hello! I would like to inquire about your SEO services.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
