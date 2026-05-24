@@ -77,11 +77,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-slate-900 font-bold mb-6">Services</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><Link to="/services#seo" className="hover:text-[#7f1bff] transition-colors">Search Optimization</Link></li>
-              <li><Link to="/services#technical-seo" className="hover:text-[#7f1bff] transition-colors">Technical Audits</Link></li>
-              <li><Link to="/services#on-page-seo" className="hover:text-[#7f1bff] transition-colors">Content Strategy</Link></li>
-              <li><Link to="/services#off-page-seo" className="hover:text-[#7f1bff] transition-colors">Off-Page SEO</Link></li>
-              <li><Link to="/services#local-seo" className="hover:text-[#7f1bff] transition-colors">Local SEO Growth</Link></li>
+              <li><Link to="/services/seo" className="hover:text-[#7f1bff] transition-colors">Search Optimization</Link></li>
+              <li><Link to="/services/technical-seo" className="hover:text-[#7f1bff] transition-colors">Technical Audits</Link></li>
+              <li><Link to="/services/on-page-seo" className="hover:text-[#7f1bff] transition-colors">Content Strategy</Link></li>
+              <li><Link to="/services/off-page-seo" className="hover:text-[#7f1bff] transition-colors">Off-Page SEO</Link></li>
+              <li><Link to="/services/local-seo" className="hover:text-[#7f1bff] transition-colors">Local SEO Growth</Link></li>
             </ul>
           </div>
 
@@ -93,12 +93,8 @@ const Footer: React.FC = () => {
                 123 Growth St, San Francisco, CA 94103
               </li>
               <li className="flex items-start">
-                <span className="text-slate-400 mr-3">📞</span>
-                <a href="tel:+919717044331" className="hover:text-[#7f1bff] transition-colors">+91 97170 44331</a>
-              </li>
-              <li className="flex items-start">
                 <span className="text-slate-400 mr-3">✉️</span>
-                <a href="mailto:divash12@gmail.com" className="hover:text-[#7f1bff] transition-colors">divash12@gmail.com</a>
+                <a href="mailto:growth@onlineseohelp.com" className="hover:text-[#7f1bff] transition-colors">growth@onlineseohelp.com</a>
               </li>
             </ul>
           </div>

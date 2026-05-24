@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
+import Breadcrumb from '../components/Breadcrumb';
 import { 
   ArrowLeftIcon, 
   BookmarkIcon, 
@@ -35,11 +36,13 @@ const BlogDetail: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-start justify-between">
             <div className="max-w-3xl">
               {/* Breadcrumbs */}
-              <nav className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-8">
-                <Link to="/blog" className="hover:text-white transition-colors">SEO</Link>
-                <ChevronRightIcon className="w-2.5 h-2.5" />
-                <span>{post.category}</span>
-              </nav>
+              <Breadcrumb
+                items={[
+                  { label: 'SEO', href: '/blog' },
+                  { label: post.category },
+                ]}
+                className="text-slate-400 uppercase tracking-widest mb-8 text-[10px] font-black"
+              />
 
               <h1 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] tracking-tighter text-[#00f2ff]">
                 {post.title}
@@ -149,7 +152,7 @@ const BlogDetail: React.FC = () => {
                   <h4 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-6">Writers</h4>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                       <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" alt="Author" />
+                       <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" alt="Author" />
                     </div>
                     <div>
                       <p className="text-xs font-black text-slate-900">{post.author}</p>

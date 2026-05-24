@@ -37,10 +37,6 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700">Phone Number</label>
-                    <input type="tel" placeholder="+1 (555) 000-0000" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#7f1bff] focus:bg-white transition-all" />
-                  </div>
-                  <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-700">Company Website</label>
                     <input type="text" placeholder="www.yourcompany.com" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#7f1bff] focus:bg-white transition-all" />
                   </div>
@@ -66,16 +62,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">Email Us</h4>
-                      <a href="mailto:divash12@gmail.com" className="text-[#7f1bff] text-sm font-medium hover:underline">divash12@gmail.com</a>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 p-6 bg-purple-100 rounded-2xl">
-                    <div className="w-12 h-12 bg-white text-purple-600 rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
-                      <PhoneIcon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900">Call / WhatsApp</h4>
-                      <a href="tel:+919717044331" className="text-slate-600 text-sm hover:text-[#7f1bff] transition-colors">+91 97170 44331</a>
+                      <a href="mailto:growth@onlineseohelp.com" className="text-[#7f1bff] text-sm font-medium hover:underline">growth@onlineseohelp.com</a>
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-slate-100 rounded-2xl">
@@ -92,7 +79,7 @@ const Contact: React.FC = () => {
 
               {/* Map Placeholder */}
               <div className="h-64 rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative grayscale">
-                <img src="https://picsum.photos/seed/map-location/600/400" alt="Map Location" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src="https://picsum.photos/seed/map-location/600/400" alt="Map Location" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-purple-600/10 pointer-events-none"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                    <div className="w-8 h-8 bg-[#7f1bff] rounded-full flex items-center justify-center text-white animate-bounce shadow-xl">
