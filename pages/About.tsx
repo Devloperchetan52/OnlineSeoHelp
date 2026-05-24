@@ -27,7 +27,7 @@ const About: React.FC = () => {
             <div className="flex-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-purple-100 rounded-[3.5rem] -rotate-2"></div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Our Team at Work" className="relative rounded-[3rem] shadow-2xl border-4 border-white" />
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Our Team at Work" className="relative rounded-[3rem] shadow-2xl border-4 border-white" />
               </div>
             </div>
             <div className="flex-1">

@@ -36,7 +36,7 @@ const CaseStudyDetail: React.FC = () => {
         </h1>
 
         <div className="rounded-[3rem] overflow-hidden shadow-2xl mb-20">
-          <img src={study.image} alt={study.title} className="w-full h-[500px] object-cover" />
+          <img loading="lazy" decoding="async" src={study.image} alt={study.title} className="w-full h-[500px] object-cover" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 py-12 border-y border-slate-100">

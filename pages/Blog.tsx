@@ -38,7 +38,7 @@ const Blog: React.FC = () => {
             {currentPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 flex flex-col group">
                 <Link to={`/blog/${post.id}`} className="block relative h-64 overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img loading="lazy" decoding="async" src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute top-6 left-6">
                     <span className="px-4 py-1 bg-[#7f1bff] text-white font-bold text-[10px] uppercase rounded-full shadow-lg">
                       {post.category}

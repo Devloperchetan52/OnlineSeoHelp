@@ -64,10 +64,10 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsMegaOpen(true)}
                 onMouseLeave={() => setIsMegaOpen(false)}
               >
-                <button className="flex items-center space-x-1 text-sm font-bold text-slate-600 hover:text-[#7f1bff] py-2">
+                <Link to="/services" className="flex items-center space-x-1 text-sm font-bold text-slate-600 hover:text-[#7f1bff] py-2">
                   <span>Services</span>
                   <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaOpen ? 'rotate-180' : ''}`} />
-                </button>
+                </Link>
                 
                 {/* Mega Menu Content */}
                 <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${isMegaOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
