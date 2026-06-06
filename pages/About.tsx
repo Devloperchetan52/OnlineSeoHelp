@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none">Built to <span className="text-[#7f1bff]">Outperform</span>.</h1>
           <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
-           , and technical engineers obsessed with turning organic search into your most profitable channel.
+           OnlineSEOHelp is a team of data scientists, content architects, and technical engineers obsessed with turning organic search into your most profitable channel.
           </p>
         </div>
       </section>
