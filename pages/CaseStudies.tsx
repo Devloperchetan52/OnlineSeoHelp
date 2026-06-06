@@ -19,7 +19,7 @@ const CaseStudies: React.FC = () => {
           {CASE_STUDIES.map((study) => (
             <div key={study.id} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
               <div className="h-56 relative overflow-hidden">
-                <img loading="lazy" decoding="async" src={study.image} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={study.image} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-1 bg-white/90 backdrop-blur-md text-[#7f1bff] text-[10px] font-black uppercase rounded-full shadow-lg border border-purple-100">
                     {study.industry}

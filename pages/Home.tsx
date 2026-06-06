@@ -120,10 +120,10 @@ const Home: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
-              to="/services/seo"
+              to="/book-demo"
               className="px-10 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-base active:scale-95"
             >
-              🎁 Get Your Free SEO Audit — Worth $99
+              🎁 Get Your Free SEO Audit — Worth ₹2999
             </Link>
             <Link
               to="/contact"
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Service 1 — Website Development */}
-              <Link to="/services/website-design" className="group relative p-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+              <Link to="/services#website-design" className="group relative p-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 flex flex-col overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
                 <div className="text-5xl mb-5">🌐</div>
                 <h3 className="text-2xl font-black text-white mb-3">Website Development</h3>
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
                 </div>
               </Link>
               {/* Service 2 — SEO */}
-              <Link to="/services/seo" className="group relative p-10 bg-gradient-to-br from-[#7f1bff] to-[#5a10c0] rounded-[2.5rem] hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+              <Link to="/services" className="group relative p-10 bg-gradient-to-br from-[#7f1bff] to-[#5a10c0] rounded-[2.5rem] hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 flex flex-col overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
                 <div className="absolute top-4 right-4 px-3 py-1 bg-white/20 rounded-full text-[10px] font-black text-white uppercase tracking-wider">Most Popular</div>
                 <div className="text-5xl mb-5">🔍</div>
@@ -194,7 +194,7 @@ const Home: React.FC = () => {
                 </div>
               </Link>
               {/* Service 3 — App Dev */}
-              <Link to="/services" className="group relative p-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 flex flex-col overflow-hidden">
+              <Link to="/services#app-development" className="group relative p-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2.5rem] hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 flex flex-col overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
                 <div className="text-5xl mb-5">📱</div>
                 <h3 className="text-2xl font-black text-white mb-3">App Development</h3>
@@ -492,7 +492,7 @@ const Home: React.FC = () => {
               {CASE_STUDIES.slice(0, 3).map((study, idx) => (
                 <Link key={idx} to={`/case-studies/${study.id}`} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
                   <div className="h-56 relative overflow-hidden">
-                    <img loading="lazy" decoding="async" src={study.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={study.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute top-5 left-5 px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black text-[#7f1bff] uppercase border border-purple-100">
                       {study.industry}
                     </div>
@@ -535,7 +535,7 @@ const Home: React.FC = () => {
                   </div>
                   <p className="text-slate-700 text-sm font-medium leading-relaxed mb-8 italic">"{item.content}"</p>
                   <div className="flex items-center gap-4">
-                    <img loading="lazy" decoding="async" src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover border-2 border-[#7f1bff]/20" />
+                    <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover border-2 border-[#7f1bff]/20" />
                     <div>
                       <p className="font-black text-slate-900 text-sm">{item.name}</p>
                       <p className="text-slate-400 text-xs font-medium">{item.role}</p>
@@ -563,7 +563,7 @@ const Home: React.FC = () => {
               {BLOG_POSTS.slice(0, 3).map((post, idx) => (
                 <Link key={idx} to={`/blog/${post.id}`} className="group bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden hover:bg-white/[0.08] hover:border-white/20 transition-all duration-500">
                   <div className="h-52 relative overflow-hidden">
-                    <img loading="lazy" decoding="async" src={post.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={post.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-8">
                     <div className="flex items-center gap-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-5">
