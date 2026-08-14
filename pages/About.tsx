@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none">Built to <span className="text-[#7f1bff]">Outperform</span>.</h1>
           <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
-            OnlineSEOHelp is a team of data scientists, content architects, and technical engineers obsessed with turning organic search into your most profitable channel.
+           OnlineSEOHelp is a team of data scientists, content architects, and technical engineers obsessed with turning organic search into your most profitable channel.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ const About: React.FC = () => {
             <div className="flex-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-purple-100 rounded-[3.5rem] -rotate-2"></div>
-                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Our Team at Work" className="relative rounded-[3rem] shadow-2xl border-4 border-white" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Our Team at Work" className="relative rounded-[3rem] shadow-2xl border-4 border-white" />
               </div>
             </div>
             <div className="flex-1">

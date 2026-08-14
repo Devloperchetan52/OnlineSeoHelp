@@ -29,13 +29,6 @@ const Services: React.FC = () => {
     }
   }, [location]);
 
-  // Ensure the page is at the top when there is no hash (so "View All Services" lands on the overview)
-  useEffect(() => {
-    if (!location.hash) {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-  }, [location]);
-
   const seoServices = [
     {
       emoji: '📌', num: '01',
@@ -259,7 +252,7 @@ const Services: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex-shrink-0 mt-1">
-                    <Link to="/services/seo" className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-black rounded-xl hover:bg-[#7f1bff] transition-all text-sm whitespace-nowrap">
+                    <Link to="/book-demo" className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-black rounded-xl hover:bg-[#7f1bff] transition-all text-sm whitespace-nowrap">
                       Get Audit <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                   </div>
@@ -326,7 +319,7 @@ const Services: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/services/website-design" className="inline-flex items-center gap-3 px-12 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-lg active:scale-95">
+            <Link to="/book-demo" className="inline-flex items-center gap-3 px-12 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-lg active:scale-95">
               👉 Get Your Website + SEO Plan <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
@@ -370,7 +363,7 @@ const Services: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/services" className="inline-flex items-center gap-3 px-12 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-lg active:scale-95">
+            <Link to="/book-demo" className="inline-flex items-center gap-3 px-12 py-5 bg-[#7f1bff] text-white font-black rounded-xl hover:bg-[#6a15d9] transition-all shadow-2xl shadow-purple-500/30 text-lg active:scale-95">
               📱 Get Your App Built <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>

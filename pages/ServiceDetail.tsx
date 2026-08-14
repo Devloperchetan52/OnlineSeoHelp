@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { SERVICES, ICON_MAP } from '../constants';
-import Breadcrumb from '../components/Breadcrumb';
 import { 
   CheckCircleIcon, 
   ArrowRightIcon, 
@@ -30,27 +29,17 @@ const ServiceDetail: React.FC = () => {
   const otherServices = SERVICES.filter(s => s.id !== id).slice(0, 3);
 
   return (
-    <div className="pt-20 bg-white">
+    <div className="pt-24 bg-white">
       {/* Hero Header */}
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#7f1bff] rounded-full blur-[150px]"></div>
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600 rounded-full blur-[120px]"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="mb-10">
-            <Breadcrumb
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Services', href: '/services' },
-                { label: service.title },
-              ]}
-              className="text-white/80"
-            />
-          </div>
           <div className="flex flex-col lg:flex-row gap-20 items-center">
-            <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
+            <div className="flex-1">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#7f1bff]/20 text-[#7f1bff] font-bold text-[10px] uppercase tracking-widest mb-8 border border-[#7f1bff]/30">
                 <span>Premium Services</span>
               </div>
@@ -73,8 +62,6 @@ const ServiceDetail: React.FC = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-[#7f1bff] rounded-[3.5rem] opacity-20 blur-2xl"></div>
                 <img 
-                  loading="lazy"
-                  decoding="async"
                   src={service.image} 
                   alt={service.title} 
                   className="relative rounded-[3rem] shadow-2xl border-4 border-slate-800 w-full h-[500px] object-cover"
